@@ -41,7 +41,7 @@ const Hero = () => {
     };
 
     return (
-<div className="relative min-h-screen flex items-center justify-center overflow-hidden p-14">
+<div className="relative flex items-center justify-center overflow-hidden max-w-8xl mx-auto h-[100vh] p-8 rounded-3xl">
             {/* Background Image Slider */}
             <div className="absolute inset-0">
                 {heroSlides.map((slide, index) => (
@@ -116,7 +116,7 @@ const Hero = () => {
                         key={currentSlide}
                         className="animate-fadeIn"
                     >
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6">
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
                             {heroSlides[currentSlide].title}
                             <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 bg-clip-text text-transparent mt-2">
                                 {heroSlides[currentSlide].highlight}
