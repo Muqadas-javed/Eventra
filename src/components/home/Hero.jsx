@@ -41,7 +41,7 @@ const Hero = () => {
     };
 
     return (
-<div className="relative flex items-center justify-center overflow-hidden max-w-8xl mx-auto h-[100vh] p-8 rounded-3xl">
+<div className="relative flex items-center justify-center overflow-hidden max-w-8xl mx-auto h-[140vh] p-8 rounded-3xl">
             {/* Background Image Slider */}
             <div className="absolute inset-0">
                 {heroSlides.map((slide, index) => (
