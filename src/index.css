@@ -17,6 +17,13 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent horizontal scroll */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -38,6 +45,17 @@ body {
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+}
+
+/* Add breathing room to all sections */
+@layer components {
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .page-section {
+    @apply py-12 md:py-16 lg:py-20;
+  }
 }
 
 /* Animation utilities */
