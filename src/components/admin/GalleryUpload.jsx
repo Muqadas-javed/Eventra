@@ -9,7 +9,7 @@ const GalleryUpload = () => {
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState('');
     const [showUploadForm, setShowUploadForm] = useState(false);
-    
+
     const [formData, setFormData] = useState({
         title: '',
         description: '',
@@ -46,7 +46,7 @@ const GalleryUpload = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        
+
         if (!formData.image) {
             alert('Please select an image');
             return;
@@ -81,7 +81,7 @@ const GalleryUpload = () => {
             });
             setShowUploadForm(false);
             fetchGallery();
-            
+
             // Reset file input
             const fileInput = document.getElementById('image-upload');
             if (fileInput) {
@@ -151,7 +151,7 @@ const GalleryUpload = () => {
                     className="bg-white rounded-2xl p-8 shadow-lg mb-8"
                 >
                     <h3 className="text-2xl font-bold text-gray-900 mb-6">Upload New Image</h3>
-                    
+
                     {error && (
                         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6">
                             <p className="font-semibold">Error:</p>
@@ -269,7 +269,9 @@ const GalleryUpload = () => {
                         >
                             <div className="aspect-square relative group">
                                 <img
-                                    src={`http://localhost:5000${image.imageUrl}`}
+                                    src={`https://eventra-backend-vzlg.onrender.com${image.imageUrl}`}
+
+                                    // src={`http://localhost:5000${image.imageUrl}`}
                                     alt={image.title}
                                     onError={(e) => {
                                         console.error('Image load error:', image.imageUrl);
